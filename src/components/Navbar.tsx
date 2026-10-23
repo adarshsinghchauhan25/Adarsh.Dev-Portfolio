@@ -59,8 +59,8 @@ export default function Navbar({ onResumeClick }: NavbarProps) {
           : 'bg-slate-950/60 backdrop-blur-sm border-b border-slate-900'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-6 h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex items-center justify-between gap-6 h-16 sm:h-18">
           {/* Brand Wordmark */}
           <a
             href="#home"

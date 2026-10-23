@@ -67,22 +67,22 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-14 sm:py-18">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+    <section id="contact" className="py-14 sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Section Header */}
-        <div className="mb-8">
+        <div className="mb-10">
           <div className="flex items-center gap-2 text-xs font-semibold text-[#00d2ff] tracking-wider uppercase mb-1">
             <Mail className="w-4 h-4" />
             <span>Get In Touch</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
             Contact
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Contact Details */}
-          <div className="space-y-4">
+          <div className="lg:col-span-5 space-y-5">
             <p className="text-sm text-slate-300 leading-relaxed">
               Feel free to reach out via email or phone for internships, student collaborations, and professional inquiries. Messages sent here are delivered directly to <span className="text-[#00d2ff] font-mono font-medium">{recipientEmail}</span>.
             </p>
@@ -115,7 +115,7 @@ export default function Contact() {
           </div>
 
           {/* Simple Direct Message Form connected to adarshuitb@gmail.com */}
-          <div className="p-6 rounded-xl bg-slate-900/70 border border-slate-800">
+          <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-slate-900/70 border border-slate-800">
             {submitted ? (
               <div className="text-center py-8 space-y-3">
                 <CheckCircle2 className="w-10 h-10 text-emerald-400 mx-auto" />

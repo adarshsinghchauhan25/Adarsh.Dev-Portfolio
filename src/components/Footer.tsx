@@ -7,8 +7,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-slate-800 bg-slate-950 py-10">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+    <footer className="border-t border-slate-800 bg-slate-950 py-10 sm:py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-slate-850">
           <div>
             <div className="text-base font-bold text-white">
