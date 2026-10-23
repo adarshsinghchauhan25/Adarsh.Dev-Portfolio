@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { personalInfo } from '../data/portfolioData';
-import { Mail, Phone, MapPin, Copy, Check, ArrowRight, GraduationCap } from 'lucide-react';
+import { Mail, MapPin, Copy, Check, ArrowRight, GraduationCap } from 'lucide-react';
 
 interface HeroProps {
   onExploreExperience: () => void;
@@ -9,18 +9,11 @@ interface HeroProps {
 
 export default function Hero({ onExploreExperience, onConnect }: HeroProps) {
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const [copiedPhone, setCopiedPhone] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(personalInfo.email);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
-  };
-
-  const handleCopyPhone = () => {
-    navigator.clipboard.writeText(personalInfo.phone);
-    setCopiedPhone(true);
-    setTimeout(() => setCopiedPhone(false), 2000);
   };
 
   return (
@@ -54,9 +47,9 @@ export default function Hero({ onExploreExperience, onConnect }: HeroProps) {
           </div>
 
           {/* Direct Contact Bar */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div className="pt-2">
             {/* Email */}
-            <div className="flex items-center justify-between p-3 rounded-lg bg-slate-900/80 border border-slate-800 text-xs">
+            <div className="flex items-center justify-between p-3 rounded-lg bg-slate-900/80 border border-slate-800 text-xs max-w-md">
               <a
                 href={`mailto:${personalInfo.email}`}
                 className="flex items-center gap-2 text-slate-200 hover:text-[#00d2ff] transition-colors"
@@ -70,24 +63,6 @@ export default function Hero({ onExploreExperience, onConnect }: HeroProps) {
                 title="Copy email"
               >
                 {copiedEmail ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-              </button>
-            </div>
-
-            {/* Phone */}
-            <div className="flex items-center justify-between p-3 rounded-lg bg-slate-900/80 border border-slate-800 text-xs">
-              <a
-                href={`tel:${personalInfo.phone}`}
-                className="flex items-center gap-2 text-slate-200 hover:text-[#00d2ff] transition-colors"
-              >
-                <Phone className="w-4 h-4 text-[#00d2ff]" />
-                <span className="font-mono">{personalInfo.phone}</span>
-              </a>
-              <button
-                onClick={handleCopyPhone}
-                className="text-slate-400 hover:text-white p-1 cursor-pointer"
-                title="Copy phone"
-              >
-                {copiedPhone ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
               </button>
             </div>
           </div>

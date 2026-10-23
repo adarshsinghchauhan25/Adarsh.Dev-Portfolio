@@ -11,7 +11,6 @@ export const personalInfo = {
   institution: "Barkatullah University Institute of Technology, Bhopal",
   graduationYear: "2029",
   email: "adarshuitb@gmail.com",
-  phone: "+918815965336",
   location: "Bhopal, Madhya Pradesh, India",
   summary:
     "I am Adarsh Singh Chauhan, a B.Tech./B.E. Engineering student specializing in Computer Science and Engineering, with an expected graduation year of 2029. My current academic focus is Computer Science and Engineering, and I am pursuing my degree as a college student. I look forward to developing my knowledge and exploring meaningful opportunities in the technology domain.",

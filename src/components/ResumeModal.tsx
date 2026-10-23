@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { personalInfo, educationData, experienceData, certificationsData, skillsList } from '../data/portfolioData';
-import { X, Printer, Mail, Phone, Copy, Check, FileText } from 'lucide-react';
+import { X, Printer, Mail, Copy, Check, FileText } from 'lucide-react';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -19,8 +19,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
   const handleCopyText = () => {
     const textResume = `
 ADARSH SINGH CHAUHAN
-Email: ${personalInfo.email} | Phone: ${personalInfo.phone}
-Location: ${personalInfo.location}
+Email: ${personalInfo.email} | Location: ${personalInfo.location}
 
 SUMMARY:
 ${personalInfo.summary}
@@ -107,11 +106,6 @@ ${certificationsData.map((c) => `- ${c.title}`).join('\n')}
               <span className="flex items-center gap-1">
                 <Mail className="w-3.5 h-3.5 text-[#00d2ff]" />
                 {personalInfo.email}
-              </span>
-              <span>·</span>
-              <span className="flex items-center gap-1">
-                <Phone className="w-3.5 h-3.5 text-[#00d2ff]" />
-                {personalInfo.phone}
               </span>
               <span>·</span>
               <span>{personalInfo.location}</span>

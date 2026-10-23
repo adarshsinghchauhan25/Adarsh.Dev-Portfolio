@@ -171,19 +171,6 @@ export default function CertificateModal({ certification, onClose, onAttachProof
                 </>
               )}
             </button>
-
-            {onAttachProof && !certification.proofImage && (
-              <button
-                onClick={() => {
-                  onClose();
-                  onAttachProof(certification.id);
-                }}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs text-[#00d2ff] bg-[#00d2ff]/10 border border-[#00d2ff]/30 hover:bg-[#00d2ff]/20 transition-colors cursor-pointer"
-              >
-                <Image className="w-3.5 h-3.5" />
-                <span>Upload Proof Image</span>
-              </button>
-            )}
           </div>
 
           <button

@@ -1,5 +1,5 @@
 import { personalInfo } from '../data/portfolioData';
-import { ArrowUp, Mail, Phone } from 'lucide-react';
+import { ArrowUp, Mail } from 'lucide-react';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -42,12 +42,9 @@ export default function Footer() {
             © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
           </div>
           <div className="flex items-center gap-4">
-            <a href={`mailto:${personalInfo.email}`} className="hover:text-[#00d2ff] transition-colors">
-              {personalInfo.email}
-            </a>
-            <span>·</span>
-            <a href={`tel:${personalInfo.phone}`} className="hover:text-[#00d2ff] transition-colors">
-              {personalInfo.phone}
+            <a href={`mailto:${personalInfo.email}`} className="hover:text-[#00d2ff] transition-colors flex items-center gap-1.5">
+              <Mail className="w-3.5 h-3.5 text-[#00d2ff]" />
+              <span>{personalInfo.email}</span>
             </a>
           </div>
         </div>

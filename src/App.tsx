@@ -14,14 +14,12 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ResumeModal from './components/ResumeModal';
 import CertificateModal from './components/CertificateModal';
-import UploadCertificateModal from './components/UploadCertificateModal';
 import { certificationsData } from './data/portfolioData';
 import { CertificationItem } from './types';
 
 export default function App() {
   const [resumeOpen, setResumeOpen] = useState(false);
   const [selectedCert, setSelectedCert] = useState<CertificationItem | null>(null);
-  const [uploadModalOpen, setUploadModalOpen] = useState(false);
 
   // Manage certifications
   const [certificationsList, setCertificationsList] = useState<CertificationItem[]>(() => {
@@ -83,7 +81,6 @@ export default function App() {
         <Certifications
           certificationsList={certificationsList}
           onSelectCertification={(cert) => setSelectedCert(cert)}
-          onOpenUploadModal={() => setUploadModalOpen(true)}
         />
 
         {/* Contact Section */}
@@ -102,13 +99,6 @@ export default function App() {
       <CertificateModal
         certification={selectedCert}
         onClose={() => setSelectedCert(null)}
-        onAttachProof={() => setUploadModalOpen(true)}
-      />
-
-      <UploadCertificateModal
-        isOpen={uploadModalOpen}
-        onClose={() => setUploadModalOpen(false)}
-        onAddCertificate={handleAddCertificate}
       />
     </div>
   );
